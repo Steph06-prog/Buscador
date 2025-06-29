@@ -1,0 +1,18 @@
+CREATE DATABASE IF NOT EXISTS datos_buscador;
+USE datos_buscador;
+
+CREATE TABLE IF NOT EXISTS datos_generales (
+  Id INT PRIMARY KEY,
+  Direccion VARCHAR(255),
+  Ciudad VARCHAR(100),
+  Telefono VARCHAR(50),
+  Codigo_Postal VARCHAR(20),
+  Tipo VARCHAR(50),
+  Precio VARCHAR(50)
+);
+SELECT COUNT(*) FROM datos_generales;
+
+SELECT * FROM datos_generales
+WHERE Ciudad = 'Houston' AND Tipo = 'Apartamento';
+
+SELECT * FROM datos_generales LIMIT 100;
